@@ -5,6 +5,9 @@
 
 const awsConfig = {
     Auth: {
+        // user: pool_user_1
+        // pass: Mekiller1.
+
         identityPoolId: "us-east-2:15511981-349f-4406-94e0-802252d13798", // example: 'us-east-2:c85f3c18-05fd-4bb5-8fd1-e77e7627a99e'
         region: "us-east-2", // example: 'us-east-2'
         userPoolId: "us-east-2_RnKeGFdQ2", // example: 'us-east-2_teEUQbkUh'
