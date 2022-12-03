@@ -21,8 +21,7 @@ const PageList = () => {
     { url: "/signin", title: "Sign In" },
     { url: "/signout", title: "Sign Out" },
     { url: "/profile", title: "Profile" },
-    { url: "/app", title: "App" },
-    { url: "/helloworld", title: "Hello World" },
+    { url: "/helloworld", title: "ApiGateway invoke" },
   ];
 
   return (

@@ -24,8 +24,8 @@ class Profile extends React.Component {
     this.state = {
       user: {
         attributes: {
-          email: "me@example.com",
-          phone_number: "+1123456789",
+          email: "",
+          phone_number: "",
         },
       },
     };

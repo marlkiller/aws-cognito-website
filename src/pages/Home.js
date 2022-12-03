@@ -19,13 +19,14 @@ import SiteFooter from "../components/SiteFooter";
 
 import "../css/main.css";
 
+//<Link className="home-button" to="/app">
 const Home = () => {
   return (
     <div className="page-home">
       <header className="site-header">
         <h1 className="title">Wild Rydes</h1>
         <SiteNav />
-        <Link className="home-button" to="/app">
+          <Link className="home-button" to="/profile">
           Giddy Up!
         </Link>
       </header>

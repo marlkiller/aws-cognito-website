@@ -15,7 +15,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
-import { Home, MainApp, Profile, HelloWorld } from "./pages";
+import { Home, Profile, HelloWorld } from "./pages";
 import { SignIn, SignOut } from "./auth";
 import "normalize.css";
 
@@ -55,7 +55,6 @@ class App extends React.Component {
           <Route path="/signout" component={SignOut} />
           <Route path="/profile" component={Profile} />
           <PrivateRoute path="/helloworld" component={HelloWorld} />
-          <PrivateRoute path="/app" component={MainApp} />
         </Switch>
       </BrowserRouter>
     );
