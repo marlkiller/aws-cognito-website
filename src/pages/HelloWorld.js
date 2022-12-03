@@ -9,7 +9,6 @@ import {
 } from '@aws-amplify/core';
 //const apiName = "WildRydesAPI";
 
-
 function HelloWorld(props) {
 
     const [response, setResponse] = useState("Not Request");
@@ -46,6 +45,7 @@ function HelloWorld(props) {
 
         let currentCredentials = await Auth.currentUserCredentials();
         let req_body = {}
+        //  doc: http://docs.aws.amazon.com/general/latest/gr/sigv4-add-signature-to-request.html
         let sign_resp = Signer.sign({
             'method':'POST',
             'url':endpoint + '/iam_auth',
