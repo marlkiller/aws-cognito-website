@@ -106,6 +106,33 @@ https://cognito-identity.us-east-2.amazonaws.com/
 
 # 5. 调用api接口认证
 
+## lambda
+
+```python
+def lambda_handler(event, context):
+
+logger.info(f'event:{event}')
+logger.info(f'context:{context}')
+
+# headers 在 使用代理集成 apigateway 中才生效 , 并且 apigateway的认证信息会转发给 lambda
+return {
+    'statusCode': 200,
+    'headers': {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
+    },
+    'body': json.dumps({
+        'body': event.get('body'),
+        'headers': event.get('headers'),
+        'requestContext': event.get('requestContext'),
+        'Unicorn': {'Name': 'Unicorn_Name'},
+        'Eta': 1,
+    })
+}
+
+```
+
 ## api_gateway cog auth : header 传递 Authorization : id_token
 
 ## api_gateway iam auth : 参考 https://docs.amazonaws.cn/general/latest/gr/sigv4-signed-request-examples.html, 如果是 临时角色 需要添加 x-amz-security-token
