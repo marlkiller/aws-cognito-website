@@ -3,26 +3,39 @@ import {Auth, API} from "aws-amplify";
 import Amplify from "aws-amplify";
 import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
+import axios from 'axios';
+import {
+    Signer
+} from '@aws-amplify/core';
+//const apiName = "WildRydesAPI";
 
-const apiName = "WildRydesAPI";
 
 function HelloWorld(props) {
 
     const [response, setResponse] = useState("Not Request");
-
+    let endpoint = API._options.API.endpoints[0].endpoint
+    let load_tips = 'Loading...'
 
     const postNoAuth = async () => {
         Amplify.Logger.LOG_LEVEL = "DEBUG";
-        const apiRequest = {
-            body: {},
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
-        return await API.post(apiName, "/no_auth", apiRequest);
+        return await axios.post(endpoint + '/no_auth')
+        .then(function (response) {
+            console.log(response.data);
+            return response.data
+        })
+        .catch(function (error) {
+            return {'error':error.message}
+        });
+//        const apiRequest = {
+//            body: {},
+//            headers: {
+//                "Content-Type": "application/json",
+//            },
+//        };
+//        return await API.post(apiName, "/no_auth", apiRequest);
     };
     const onClick_no_auth = async () => {
-        setResponse('')
+        setResponse(load_tips)
         let resp = await postNoAuth();
         console.log(resp);
         setResponse(JSON.stringify(resp,null,2));
@@ -30,39 +43,73 @@ function HelloWorld(props) {
 
     const postIAMAuth = async () => {
         Amplify.Logger.LOG_LEVEL = "DEBUG";
-        const apiRequest = {
-            body: {},
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
-        return await API.post(apiName, "/iam_auth", apiRequest);
+
+        let currentCredentials = await Auth.currentUserCredentials();
+        let req_body = {}
+        let sign_resp = Signer.sign({
+            'method':'POST',
+            'url':endpoint + '/iam_auth',
+            'headers':{ "Content-Type": "application/json",},
+            'data': JSON.stringify(req_body)
+        },{
+            'access_key':currentCredentials.accessKeyId,
+            'secret_key':currentCredentials.secretAccessKey,
+            'session_token':currentCredentials.sessionToken
+        },{
+            'service':'execute-api',
+            'region':'us-east-2',
+        })
+        return await axios.post(endpoint + '/iam_auth',req_body,{
+            headers:sign_resp.headers
+        }).then(function (response) {
+            console.log(response.data);
+            return response.data
+        }).catch(function (error) {
+            return {'error':error.message}
+        });
+//        const apiRequest = {
+//            body: {},
+//            headers: {
+//                "Content-Type": "application/json",
+//            },
+//        };
+//        return await API.post(apiName, "/iam_auth", apiRequest);
     };
     const onClick_iam_auth = async () => {
-        setResponse('')
+        setResponse(load_tips)
         let resp = await postIAMAuth();
         console.log(resp);
         setResponse(JSON.stringify(resp,null,2));
     };
     const postCogAuth = async () => {
+        Amplify.Logger.LOG_LEVEL = "DEBUG";
         let session = null
         try {
             session = await Auth.currentSession();
         }catch (e) {
             console.error('no session ??',e);
         }
-        Amplify.Logger.LOG_LEVEL = "DEBUG";
-        const apiRequest = {
-            body: {},
-            headers: {
-                "Content-Type": "application/json",
+        return await axios.post(endpoint + '/cog_auth',{},{
+            headers:{
                 "Authorization":  session?session.getIdToken().getJwtToken():""
-            },
-        };
-        return await API.post(apiName, "/cog_auth", apiRequest);
+            }
+        }).then(function (response) {
+            console.log(response.data);
+            return response.data
+        }).catch(function (error) {
+            return {'error':error.message}
+        });
+//        const apiRequest = {
+//            body: {},
+//            headers: {
+//                "Content-Type": "application/json",
+//                "Authorization":  session?session.getIdToken().getJwtToken():""
+//            },
+//        };
+//        return await API.post(apiName, "/cog_auth", apiRequest);
     };
     const onClick_cog_auth = async () => {
-        setResponse('')
+        setResponse(load_tips)
         let resp = await postCogAuth();
         console.log(resp);
         setResponse(JSON.stringify(resp,null,2));
