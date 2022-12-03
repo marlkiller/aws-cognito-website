@@ -45,13 +45,18 @@ function HelloWorld(props) {
         setResponse(JSON.stringify(resp,null,2));
     };
     const postCogAuth = async () => {
-        const session = await Auth.currentSession();
+        let session = null
+        try {
+            session = await Auth.currentSession();
+        }catch (e) {
+            console.error('no session ??',e);
+        }
         Amplify.Logger.LOG_LEVEL = "DEBUG";
         const apiRequest = {
             body: {},
             headers: {
                 "Content-Type": "application/json",
-                "Authorization":  session.getIdToken().getJwtToken()
+                "Authorization":  session?session.getIdToken().getJwtToken():""
             },
         };
         return await API.post(apiName, "/cog_auth", apiRequest);
