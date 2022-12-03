@@ -24,10 +24,10 @@ const Home = () => {
   return (
     <div className="page-home">
       <header className="site-header">
-        <h1 className="title">Wild Rydes</h1>
+        <h1 className="title">home page</h1>
         <SiteNav />
           <Link className="home-button" to="/profile">
-          Giddy Up!
+          Go profile
         </Link>
       </header>
       <SiteFooter />

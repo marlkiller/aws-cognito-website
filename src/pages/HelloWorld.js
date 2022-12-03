@@ -22,6 +22,7 @@ function HelloWorld(props) {
         return await API.post(apiName, "/no_auth", apiRequest);
     };
     const onClick_no_auth = async () => {
+        setResponse('')
         let resp = await postNoAuth();
         console.log(resp);
         setResponse(JSON.stringify(resp,null,2));
@@ -38,6 +39,7 @@ function HelloWorld(props) {
         return await API.post(apiName, "/iam_auth", apiRequest);
     };
     const onClick_iam_auth = async () => {
+        setResponse('')
         let resp = await postIAMAuth();
         console.log(resp);
         setResponse(JSON.stringify(resp,null,2));
@@ -55,6 +57,7 @@ function HelloWorld(props) {
         return await API.post(apiName, "/cog_auth", apiRequest);
     };
     const onClick_cog_auth = async () => {
+        setResponse('')
         let resp = await postCogAuth();
         console.log(resp);
         setResponse(JSON.stringify(resp,null,2));

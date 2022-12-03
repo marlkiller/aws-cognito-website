@@ -25,13 +25,20 @@ import awsConfig from "./amplify-config";
 Amplify.configure(awsConfig);
 
 async function getUserInfo() {
-  try {
-    await Auth.currentAuthenticatedUser();
-    return true;
-  } catch (e) {
-    Auth.federatedSignIn();
-    return false;
-  }
+    try {
+        await Auth.currentAuthenticatedUser();
+        return true;
+    } catch (e) {
+        var msg = "login ??";
+        if (window.confirm(msg)===true){
+            Auth.federatedSignIn();
+        }else{
+            return false;
+        }
+        return false;
+    }
+
+
 }
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
