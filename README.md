@@ -70,6 +70,11 @@
 
 此时点击 cognito-wildrydes-website-2 的 “Sign In” 不再需要登录，将会自动跳转到 Hosted UI 域名地址通过SSO登陆成功，然后访问 http://localhost:4000/profile 可以看到用户登陆信息。
 
+
+## 2.6 不同的 auth 认证效果
+
+![avatar](pictures/auth.png)
+
 # 参考链接：
 
 https://auth.serverlessworkshops.io/user_auth/user_pool.html
