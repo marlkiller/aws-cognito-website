@@ -11547,7 +11547,7 @@
 
 "react-scripts@^3.4.4":
   "integrity" "sha512-7J7GZyF/QvZkKAZLneiOIhHozvOMHey7hO9cdO9u68jjhGZlI8hDdOm6UyuHofn6Ajc9Uji5I6Psm/nKNuWdyw=="
-  "resolved" "https://registry.npmmirror.com/react-scripts/-/react-scripts-3.4.4.tgz"
+  "resolved" "https://registry.npmjs.org/react-scripts/-/react-scripts-3.4.4.tgz"
   "version" "3.4.4"
   dependencies:
     "@babel/core" "7.9.0"

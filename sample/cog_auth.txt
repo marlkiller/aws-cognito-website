@@ -1,0 +1,73 @@
+{
+  "body": "{}",
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-encoding": "gzip, deflate, br",
+    "accept-language": "zh-CN,zh;q=0.9",
+    "Authorization": "eyJraWQiOiJTZFM5WTM2U1pxSm9cLzArcnN6cVo3OTROMnpIU004MTFSd1lMS3JJXC9UZGM9IiwiYWxnIjoiUlMyNTYifQ.eyJhdF9oYXNoIjoiWjZIM2tzZjBxTWYybnBodzJUaEc5QSIsInN1YiI6IjBhYWJmNDMxLTI4NDQtNDAwMy1hY2Q2LWUwOGI5MjRkZDZmNSIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMl9SbktlR0ZkUTJfb2lkY2RldiJdLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX1JuS2VHRmRRMiIsImNvZ25pdG86dXNlcm5hbWUiOiJvaWRjZGV2XzYzODg4NzI4NWNhZTQyODBmZmM4OTllNiIsIm5vbmNlIjoiZGxYU1pSTk9fT1lCY1hqdm10NEtOcG9FNEM3SW5fMVlPOU9TY3lUWnBHNGRzZUFTZDM1ZldJeHhTdUp4akpwc1BmWjFqRmNBNFVFdWhLUzlxZUNtcE1yQXlNTVFJWm5MbV9iMGVNb2ZmWXRWV3k5NENGbmRkYkJGZVNVMVdId1BkN2NuQ2R2cXB3bGc5a1dRZGNKcW9PY1AyNzUxT3lTd3lTb1RPdjUxQ2VZIiwiYXVkIjoiN3JraHFhYmMxajltbHMwbm5hYmcyNmIwbXAiLCJpZGVudGl0aWVzIjpbeyJ1c2VySWQiOiI2Mzg4ODcyODVjYWU0MjgwZmZjODk5ZTYiLCJwcm92aWRlck5hbWUiOiJvaWRjZGV2IiwicHJvdmlkZXJUeXBlIjoiT0lEQyIsImlzc3VlciI6bnVsbCwicHJpbWFyeSI6InRydWUiLCJkYXRlQ3JlYXRlZCI6IjE2NzAwMDAwNzkxODYifV0sInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjcwNTU5MTI1LCJleHAiOjE2NzA1NjI3MjUsImlhdCI6MTY3MDU1OTEyNSwianRpIjoiMDUwYjQxZDMtNmM1Yi00NDcwLThlNzQtYjkzMDcyZjczOTU0IiwiZW1haWwiOiJ1c2VyX2RldkBxcS5jb20ifQ.WGQBEoC-kyK6Hpv5wDKUASdm-IdPZVfHRodPOwxTUtcXhb2cDoa_57s3STIyzCFbeyryAnIH8SDypYgee9QFNw1OHyI-Nnv764BTeddD837Mq-2sYLk3aDtnnFFMfWCL3rfOVIqe-RG2S2iakypBV9T2htH3uFsX42mvc7l5FCqLCMsIBJyBKwG2qUWJlwnG_Kepp2imPXxik4LjblHKkEkwuOQJRXLqsX8-Gq9afCcUz5trfhu5DUGh_-7hNZ4Mdyds9mXgesGSXqLYhegWwTI6jOlSVYYu73tif4fFr9o-_3ny-1nXxTCucVrTGxCiU1MKocqXqyQFTyJwT_97Fg",
+    "content-type": "application/json;charset=UTF-8",
+    "Host": "de7es6k23g.execute-api.us-east-2.amazonaws.com",
+    "origin": "http://localhost:3000",
+    "referer": "http://localhost:3000/",
+    "sec-ch-ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+    "X-Amzn-Trace-Id": "Root=1-6392b5a9-0ccd806a26e5534e7e171cf5",
+    "X-Forwarded-For": "111.198.29.140",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "requestContext": {
+    "resourceId": "hges8q",
+    "authorizer": {
+      "claims": {
+        "at_hash": "Z6H3ksf0qMf2nphw2ThG9A",
+        "sub": "0aabf431-2844-4003-acd6-e08b924dd6f5",
+        "cognito:groups": "us-east-2_RnKeGFdQ2_oidcdev",
+        "email_verified": "false",
+        "iss": "https://cognito-idp.us-east-2.amazonaws.com/us-east-2_RnKeGFdQ2",
+        "cognito:username": "oidcdev_638887285cae4280ffc899e6",
+        "nonce": "dlXSZRNO_OYBcXjvmt4KNpoE4C7In_1YO9OScyTZpG4dseASd35fWIxxSuJxjJpsPfZ1jFcA4UEuhKS9qeCmpMrAyMMQIZnLm_b0eMoffYtVWy94CFnddbBFeSU1WHwPd7cnCdvqpwlg9kWQdcJqoOcP2751OySwySoTOv51CeY",
+        "aud": "7rkhqabc1j9mls0nnabg26b0mp",
+        "identities": "{\"dateCreated\":\"1670000079186\",\"userId\":\"638887285cae4280ffc899e6\",\"providerName\":\"oidcdev\",\"providerType\":\"OIDC\",\"issuer\":null,\"primary\":\"true\"}",
+        "token_use": "id",
+        "auth_time": "1670559125",
+        "exp": "Fri Dec 09 05:12:05 UTC 2022",
+        "iat": "Fri Dec 09 04:12:05 UTC 2022",
+        "jti": "050b41d3-6c5b-4470-8e74-b93072f73954",
+        "email": "user_dev@qq.com"
+      }
+    },
+    "resourcePath": "/cog_auth",
+    "httpMethod": "POST",
+    "extendedRequestId": "c3FSiGtZiYcFcVA=",
+    "requestTime": "09/Dec/2022:04:12:25 +0000",
+    "path": "/v1/cog_auth",
+    "accountId": "557071074234",
+    "protocol": "HTTP/1.1",
+    "stage": "v1",
+    "domainPrefix": "de7es6k23g",
+    "requestTimeEpoch": 1670559145639,
+    "requestId": "5584363c-fc34-4a6c-8c52-d97dd0c0f092",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "111.198.29.140",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "user": null
+    },
+    "domainName": "de7es6k23g.execute-api.us-east-2.amazonaws.com",
+    "apiId": "de7es6k23g"
+  }
+}

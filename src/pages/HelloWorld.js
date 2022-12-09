@@ -81,6 +81,28 @@ function HelloWorld(props) {
         console.log(resp);
         setResponse(JSON.stringify(resp,null,2));
     };
+
+    const postLambdaAuth = async () => {
+        var result = window.prompt("Authorization", "Allow");
+
+        return await axios.post(endpoint + '/diy_auth',{},{
+            headers:{
+                "authorization":  result
+            }
+        }).then(function (response) {
+            console.log(response.data);
+            return response.data
+        }).catch(function (error) {
+            return {'error':error.message}
+        });
+    };
+    const onClick_lambda_auth = async () => {
+        setResponse(load_tips)
+        let resp = await postLambdaAuth();
+        console.log(resp);
+        setResponse(JSON.stringify(resp,null,2));
+    };
+
     const postCogAuth = async () => {
         Amplify.Logger.LOG_LEVEL = "DEBUG";
         let session = null
@@ -129,6 +151,7 @@ function HelloWorld(props) {
             <SiteNav/>
             <div style={divStyle} className="row column">
                 <button onClick={onClick_no_auth}>postNoAuth</button>
+                <button onClick={onClick_lambda_auth}>postLambdaAuth</button>
                 <button onClick={onClick_iam_auth}>postIAMAuth</button>
                 <button onClick={onClick_cog_auth}>postCogAuth</button>
             </div>

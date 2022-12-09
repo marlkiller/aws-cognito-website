@@ -1,0 +1,52 @@
+{
+  "body": null,
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-encoding": "gzip, deflate, br",
+    "accept-language": "zh-CN,zh;q=0.9",
+    "Host": "de7es6k23g.execute-api.us-east-2.amazonaws.com",
+    "origin": "http://localhost:3000",
+    "referer": "http://localhost:3000/",
+    "sec-ch-ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+    "X-Amzn-Trace-Id": "Root=1-6392b52e-6320f78e6e8913d66f029ad9",
+    "X-Forwarded-For": "111.198.29.140",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "requestContext": {
+    "resourceId": "kn5xsg",
+    "resourcePath": "/no_auth",
+    "httpMethod": "POST",
+    "extendedRequestId": "c3E_VEKNiYcFlLQ=",
+    "requestTime": "09/Dec/2022:04:10:22 +0000",
+    "path": "/v1/no_auth",
+    "accountId": "557071074234",
+    "protocol": "HTTP/1.1",
+    "stage": "v1",
+    "domainPrefix": "de7es6k23g",
+    "requestTimeEpoch": 1670559022751,
+    "requestId": "a3c9b98a-e1bf-4fec-9f47-5bb46365805d",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "111.198.29.140",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+      "user": null
+    },
+    "domainName": "de7es6k23g.execute-api.us-east-2.amazonaws.com",
+    "apiId": "de7es6k23g"
+  }
+}
