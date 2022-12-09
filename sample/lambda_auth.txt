@@ -1,0 +1,50 @@
+{
+    "body": null,
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Authorization": "Allow",
+        "Cache-Control": "no-cache",
+        "Host": "de7es6k23g.execute-api.us-east-2.amazonaws.com",
+        "User-Agent": "PostmanRuntime/7.29.2",
+        "X-Amzn-Trace-Id": "Root=1-6392cbb0-4b4b47420eac97f364a53ce2",
+        "X-Forwarded-For": "111.198.29.140",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "requestContext": {
+        "resourceId": "6yygp2",
+        "authorizer": {
+            "msg": "this is context",
+            "principalId": "yyyyyyyy",
+            "integrationLatency": 21
+        },
+        "resourcePath": "/diy_auth",
+        "httpMethod": "POST",
+        "extendedRequestId": "c3TDkHgeiYcFZeQ=",
+        "requestTime": "09/Dec/2022:05:46:24 +0000",
+        "path": "/v1/diy_auth",
+        "accountId": "557071074234",
+        "protocol": "HTTP/1.1",
+        "stage": "v1",
+        "domainPrefix": "de7es6k23g",
+        "requestTimeEpoch": 1670564784238,
+        "requestId": "1ed5558b-6177-4719-81fa-b07f7e6d4c76",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "111.198.29.140",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "PostmanRuntime/7.29.2",
+            "user": null
+        },
+        "domainName": "de7es6k23g.execute-api.us-east-2.amazonaws.com",
+        "apiId": "de7es6k23g"
+    }
+}
