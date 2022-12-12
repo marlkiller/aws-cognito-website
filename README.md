@@ -59,6 +59,11 @@
 
 4、 "npm i react-scripts && npm start" 启动应用程序，点击”Sign In“，将会跳转到HostUI托管的登录/注册页面，第一次需要先注册，注册成功登陆后访问http://localhost:3000/profile可以看到注册邮箱，表示用户登陆成功。
 
+```
+Error: error:0308010C:digital envelope routines::unsupported
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+
 ![avatar](pictures/11.png)
 
 
