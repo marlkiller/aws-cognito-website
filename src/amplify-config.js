@@ -22,8 +22,8 @@ const awsConfig = {
                 "openid",
                 "aws.cognito.signin.user.admin",
             ],
-            redirectSignIn: "http://localhost:3000",
-            redirectSignOut: "http://localhost:3000",
+            redirectSignIn: "https://aws-idp.netlify.app",
+            redirectSignOut: "https://aws-idp.netlify.app",
             responseType: "token", // or 'token', note that REFRESH token will only be generated when the responseType is code
         },
     },
